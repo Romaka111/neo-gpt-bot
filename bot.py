@@ -59,3 +59,9 @@ async def start_bot():
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, dalle))  # Изменить на chat, если не хочешь картинки
     print("🤖 Bot is running...")
     await app.run_polling()
+
+# <<< Вот эта часть обязательна! >>>
+import asyncio
+
+if __name__ == "__main__":
+    asyncio.run(start_bot())
