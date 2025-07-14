@@ -62,9 +62,11 @@ async def start_bot():
 
 # <<< Вот эта часть обязательна! >>>
 import asyncio
+import nest_asyncio
+
+from your_module import start_bot
 
 if __name__ == "__main__":
-    import asyncio
-    import nest_asyncio
     nest_asyncio.apply()
-    asyncio.get_event_loop().run_until_complete(start_bot())
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(start_bot())
