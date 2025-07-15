@@ -23,7 +23,7 @@ await app.bot.set_webhook(
   secret_token=WEBHOOK_SECRET_KEY
 )
 
-    print("Webhook установлен с секретом:", webhook_url)
+print("Webhook установлен с секретом:", webhook_url)
 
     await app.run_webhook(
         listen="0.0.0.0",
