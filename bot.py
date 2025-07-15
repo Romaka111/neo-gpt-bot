@@ -35,4 +35,4 @@ await app.run_webhook(
 if __name__ == "__main__":
   import nest_asyncio
   nest_asyncio.apply()
-    asyncio.get_event_loop().run_until_complete(start_bot())
+  asyncio.get_event_loop().run_until_complete(start_bot())
