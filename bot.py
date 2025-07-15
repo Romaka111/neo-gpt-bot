@@ -1,5 +1,6 @@
 import os
 import asyncio
+import nest_asyncio
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
@@ -10,7 +11,7 @@ WEBHOOK_SECRET_KEY = os.getenv("WEBHOOK_SECRET_KEY")
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
   await update.message.reply_text("Привет! Это NeoGPT, я запущен на Webhook с защитой!")
 
-async def start_bot():
+async def main():
   app = Application.builder().token(BOT_TOKEN).build()
   
 app.add_handler(CommandHandler("start", start))
@@ -33,6 +34,5 @@ await app.run_webhook(
 )
 
 if __name__ == "__main__":
-  import nest_asyncio
   nest_asyncio.apply()
-  asyncio.get_event_loop().run_until_complete(start_bot())
+  asyncio.run(main())
