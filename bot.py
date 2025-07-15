@@ -8,12 +8,12 @@ BASE_URL = os.getenv("BASE_URL")
 WEBHOOK_SECRET_KEY = os.getenv("WEBHOOK_SECRET_KEY")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Привет! Это NeoGPT, я запущен на Webhook с защитой!")
+  await update.message.reply_text("Привет! Это NeoGPT, я запущен на Webhook с защитой!")
 
 async def start_bot():
     app = Application.builder().token(BOT_TOKEN).build()
-
-    app.add_handler(CommandHandler("start", start))
+    
+app.add_handler(CommandHandler("start", start))
 
     webhook_url = f"{BASE_URL}/webhook/{BOT_TOKEN}"
 
