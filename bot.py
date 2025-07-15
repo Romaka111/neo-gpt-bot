@@ -12,7 +12,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def start_bot():
   app = Application.builder().token(BOT_TOKEN).build()
-    
+  
 app.add_handler(CommandHandler("start", start))
 
     webhook_url = f"{BASE_URL}/webhook/{BOT_TOKEN}"
