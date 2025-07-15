@@ -28,9 +28,9 @@ print("Webhook установлен с секретом:", webhook_url)
 await app.run_webhook(
   listen="0.0.0.0",
   port=8000,
-        webhook_path=f"/webhook/{BOT_TOKEN}",
-        secret_token=WEBHOOK_SECRET_KEY,
-    )
+  webhook_path=f"/webhook/{BOT_TOKEN}",
+  secret_token=WEBHOOK_SECRET_KEY,
+)
 
 if __name__ == "__main__":
     import nest_asyncio
