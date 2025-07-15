@@ -20,8 +20,8 @@ webhook_url = f"{BASE_URL}/webhook/{BOT_TOKEN}"
 # Установка webhook с секретным токеном
 await app.bot.set_webhook(
   url=webhook_url,
-        secret_token=WEBHOOK_SECRET_KEY
-    )
+  secret_token=WEBHOOK_SECRET_KEY
+)
 
     print("Webhook установлен с секретом:", webhook_url)
 
