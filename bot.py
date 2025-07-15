@@ -15,7 +15,7 @@ async def start_bot():
   
 app.add_handler(CommandHandler("start", start))
 
-    webhook_url = f"{BASE_URL}/webhook/{BOT_TOKEN}"
+webhook_url = f"{BASE_URL}/webhook/{BOT_TOKEN}"
 
     # Установка Webhook с секретным токеном
     await app.bot.set_webhook(
