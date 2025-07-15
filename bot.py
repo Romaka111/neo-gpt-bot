@@ -11,7 +11,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
   await update.message.reply_text("Привет! Это NeoGPT, я запущен на Webhook с защитой!")
 
 async def start_bot():
-    app = Application.builder().token(BOT_TOKEN).build()
+  app = Application.builder().token(BOT_TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
 
